@@ -6,6 +6,8 @@ ruby '2.4.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.4'
 # Use sqlite3 as the database for Active Record
+gem 'bootstrap-sass', '3.3.7'
+
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
@@ -60,6 +62,7 @@ group :test do
   gem 'chromedriver-helper'
   gem 'guard',                    '2.16.2'
   gem 'guard-minitest',           '2.4.4'
+  gem 'rails-controller-testing'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
