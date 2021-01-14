@@ -11,7 +11,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", "https://fr-fr.facebook.com/city.komaki/posts/1215975871778439/"
     assert_select "a[href=?]", "https://hibiclassic.com/news/"
     get contact_path
-    assert_select "title", full_title("Contact")
+    assert_select "title", "Contact | Piano app"
     get signup_path
     assert_response :success
   end
