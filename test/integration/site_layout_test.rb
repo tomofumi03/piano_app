@@ -37,5 +37,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "title", "Contact | Piano app"
     get signup_path
     assert_response :success
+    assert_match @user.active_relationships.count.to_s, response.body
+    assert_match @user.passive_relationships.count.to_s, response.body
   end
 end
